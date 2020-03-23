@@ -1,6 +1,3 @@
-///Dănănău Ștefan Răzvan
-///Grupa 142
-///POO Tema 1
 #include <iostream>
 using namespace std;
 class vector{
@@ -86,7 +83,7 @@ vector operator+(vector a, vector b){
         vector aux(a.n);
         for(int i = 1 ; i <= a.n; i ++)
             aux.arr[i] = a.arr[i] + b.arr[i];
-        return aux;
+        aux.show_vector();
     }
 }
 vector operator+(vector a){
@@ -102,14 +99,14 @@ vector operator-(vector a, vector b){
         vector aux(a.n);
         for(int i = 1; i <= a.n; i ++)
             aux.arr[i] = a.arr[i] - b.arr[i];
-        return aux;
+        aux.show_vector();
     }
 }
 vector operator-(vector a){
     vector aux(a.n);
     for(int i = 1; i <= a.n; i ++)
         aux.arr[i] = -a.arr[i];
-    return aux;
+    aux.show_vector();
 }
 vector operator*(vector a, vector b){
     if(a.n != b.n)
@@ -118,7 +115,7 @@ vector operator*(vector a, vector b){
         vector aux(a.n);
         for(int i = 1; i <= a.n; i ++)
             aux.arr[i] = a.arr[i] * b.arr[i];
-        return aux;
+        aux.show_vector();
     }
 }
 vector operator*(vector a, int b){
